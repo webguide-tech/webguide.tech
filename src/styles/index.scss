@@ -1,0 +1,103 @@
+@import "./sidenav.scss";
+@import "./mainpage.scss";
+@import "./topactionbar.scss";
+@import "./mobHeader.scss";
+@import "./Navbar.scss";
+@import './Page1.scss';
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Verdana, sans-serif;
+  background-color: $theme-background;
+  height: 100vh;
+}
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  .li-section {
+    margin-bottom: 7px;
+  }
+}
+// background: linear-gradient(60deg, #ffa726, #fb8c00);
+//     box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(255, 152, 0,.4);
+
+// background: linear-gradient(60deg, #66bb6a, #43a047);
+// box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(76, 175, 80,.4);
+
+//     background: linear-gradient(60deg, #ef5350, #e53935);
+//box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(244, 67, 54,.4);
+
+// background: linear-gradient(60deg, #26c6da, #00acc1);
+// box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(0, 172, 193,.4);
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+
+  .active-route {
+    color: #fff !important;
+    background: $theme-hover;
+    text-decoration: none !important;
+  }
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #ccc;
+  text-align: center;
+  padding: 5px 13px;
+  // text-decoration: none;
+  font-size: 17px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+a:hover {
+  color: #fff !important;
+  background: $theme-hover;
+  // font-size: 20px;
+  text-decoration: none !important;
+}
+
+// a:focus {
+//   color: #fff !important;
+//   background: $theme-hover;
+//   // text-decoration: underline;
+// }
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav {
+  a:nth-child(1):hover {
+    background: #333 !important;
+  }
+  .active-route:nth-child(1) {
+    background: #333 !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .topnav {
+    display: none;
+  }
+}

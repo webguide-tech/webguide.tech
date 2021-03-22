@@ -1,0 +1,103 @@
+@import "./variable.scss";
+
+.hamburger-sidenav-container {
+  .hamburger-line {
+    background: #000 !important;
+  }
+}
+.hamburger-container {
+  cursor: pointer;
+  margin-right: 20px;
+  .hamburger-line {
+    width: 35px;
+    height: 5px;
+    background-color: $pure-white;
+    margin: 6px 0;
+  }
+}
+
+.sidenav-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-container {
+  @extend .sidenav-flex;
+  position: fixed;
+  left: 0;
+  top: 85px;
+  height: 100vh;
+  width: 200px;
+  // border-right: 1px solid #333;
+background: #f4f5f7;
+  a {
+    color: #333;
+    padding: 2px 15px;
+    margin: 2px 0;
+  }
+  a:hover {
+    color: #000 !important;
+    background: #ccc;
+    font-size: 19px;
+    text-decoration: underline !important;
+  }
+}
+.top-sidenav {
+  @extend .sidenav-flex;
+}
+.bottom-sidenav {
+  @extend .sidenav-flex;
+}
+.icon-thumbnail {
+  border-radius: 50%;
+  width: 50%;
+  height: 80px;
+}
+.name-thumbnail {
+  // text-align: center;
+  color: $dark-orange;
+  padding-right: 80px;
+  cursor: pointer;
+  // margin-bottom: 10px;
+}
+.active-route {
+  // font-size: 30px !important;
+  // color: #fff !important;
+  // font-size: 19px;
+  color: #fff !important;
+  background: #ef5350;
+  //  
+  // background: linear-gradient(60deg, #66bb6a, #43a047);
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger-container { 
+    display: none;
+  }
+  .sidenav-container {
+    top: 65px;
+  }
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
